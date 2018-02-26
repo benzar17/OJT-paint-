@@ -1,66 +1,66 @@
-body{
+body
+{
     
     margin: 0;
     padding: 0;
     background-color:#D2DBE9;
     
 }
-.clear{
-    
+
+.clear
+{    
     clear: both;
 }
 
- #properties{
+ #properties
+{
     color: #663977; 
     height: 100px;
     position: absolute;
     background-color: #DCE6F4;
-    border-bottom: 2px solid #C5CFDF; 
-    
+    border-bottom: 2px solid #C5CFDF;     
 }
 
-#controls{
-    
-    
-        color: #663977; 
+#controls
+{        
+    color: #663977; 
     position: absolute;
     background-color: #DCE6F4;
     border-bottom: 2px solid #C5CFDF; 
-    
-    
+      
 }
 
-.container{
-    
+.container
+{    
     float: bottom;
     position: relative;
     padding-left: 20px;
     padding-right: 20px;
     height: 100px;
     width:100px;
-    border-right: 1px solid A5B8D0;
-    
+    border-right: 1px solid A5B8D0;    
 }
 
-input[type="button"], input[type="file"]{
-    
+input[type="button"], input[type="file"]
+{
     width: 86px; 
 }
 
-input[type="number"]{
+input[type="number"]
+{
     width: 40px;
     position: absolute;
-    
 }
 
-input[type="color"]{
+input[type="color"]
+{
     widows: 50px;
     height: 40px;
-    margin: 10px, 0, 0, 12px;
-    
+    margin: 10px, 0, 0, 12px;    
 }
 
-#controls .name{
+#controls .name
+{
     position: absolute;
     bottom: -2px;
     width: 80px;
@@ -68,32 +68,30 @@ input[type="color"]{
     right: 20px;
     font: 12px Arial;
     color: #9883A9;
-    
 }
 
-#tool-images{
+#tool-images
+{
     width: 50px;
     margin-left: 20px;
-    margin-top: 10px;
-    
+    margin-top: 10px;    
 }
 
-#tool-images img:hover, .tool-active{
+#tool-images img:hover, .tool-active
+{
     cursor: pointer;
     border: 1px solid blue;
 }
 
-
-
-#tool-size ul{
-    
+#tool-size ul
+{   
     list-style: none;
     margin:0;
     padding: 0;
 }
 
-#tool-size li:hover, .size-active{
-    
+#tool-size li:hover, .size-active
+{    
     cursor: pointer;
     border: 1px solid;
     border-radius: 2px;
@@ -103,31 +101,32 @@ input[type="color"]{
 
 /*------- canvases-------*/
 
-#canvases{
+#canvases
+{
     position: relative;
     margin-left: 140px;
-    margin: 5px, 0, 0, 5px;
-    
+    margin: 5px, 0, 0, 5px;    
 }
 
-#canvases:hover{
-    
+#canvases:hover
+{    
     cursor: pointer;
 }
 
-#front-canvas{
-    
+#front-canvas
+{    
     position: absolute;
     left: 0;
 }
-#back-canvas{
-    
+#back-canvas
+{
     position: absolute;
     left: 0;
     background-color: white;
 }
 
-#properties{
+#properties
+{
     position: fixed;
     right: 5px;
     width: 130px;
@@ -137,36 +136,33 @@ input[type="color"]{
     
 }
 
-#properties input[type="number"]{
-    
+#properties input[type="number"]
+{    
     margin-right: 5px;
-    width: 60px;
-    
+    width: 60px;    
 }
 
-#properties-title{
-text-align: center;
-    
+#properties-title
+{
+text-align: center;    
 }
-#invert{
-    
-    width: 120px;
-    
+#invert
+{
+    width: 120px;   
 }
 
-#blue{
-    
+#blue
+{    
     background: #0000ff;
     margin-top: 2px;
     width: 40px;
     height: 20px;
     position: relative;
-    float: left;
-    
+    float: left;   
 }
 
-#black{
-    
+#black
+{
     background: #000000;
     margin-top: 2px;
     width: 40px;
@@ -175,8 +171,8 @@ text-align: center;
     float: left;
 }
 
-#red{
-    
+#red
+{    
     background: #ff0000;
     margin-top: 2px;
     width: 40px;
@@ -185,8 +181,7 @@ text-align: center;
     float: left;
 }
 
-#green{
-    
+#green{   
     background: #00cc00;
     margin-top: 2px;
     width: 40px;
@@ -195,8 +190,8 @@ text-align: center;
     float: left;
 }
 
-#yellow{
-    
+#yellow
+{    
     background: #ffff00;
     margin-top: 2px;
     width: 40px;
@@ -205,46 +200,40 @@ text-align: center;
     float: left;
 }
 
-#color input[type="button"]:hover, .color-active{
-    
-        cursor: pointer;
+#color input[type="button"]:hover, .color-active
+{    
+    cursor: pointer;
     border: 2px solid;
     border-radius: 2px;
     border-color:#33ffad;
-
-
 }
 
-#secondSize{
-    
-    width: 40px;
-    
+#secondSize
+{    
+    width: 40px;   
 }
  
 
-#thirdSize{
-    
-    width: 40px;
-    
+#thirdSize
+{    
+    width: 40px;   
 }
 
 
-#square{
-    
-         height: 20px;
-        width: 20px;
-        background-color: #555;
-        border-style: solid;
-        margin:10px;
+#square
+{
+    height: 20px;
+    width: 20px;
+    background-color: #555;
+    border-style: solid;
+    margin:10px;
 }
 
-
-
-#rectangle{
-
-        height: 20px;
-        width: 35px;
-        background-color: #555;
-        border-style: solid;
-        margin:10px;
+#rectangle
+{
+    height: 20px;
+    width: 35px;
+    background-color: #555;
+    border-style: solid;
+    margin:10px;
 }
