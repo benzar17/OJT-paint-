@@ -6,7 +6,6 @@ var canvasFront = document.getElementById('front-canvas'),
 var canvasWidth = document.getElementById('canvas-width'),
     canvasHeight = document.getElementById('canvas-height');
 
-
 var canvasPosition;
 
 var mouseX, mouseY, 
@@ -41,39 +40,29 @@ colors.ycolor = document.getElementById('yellow');
 colors.rcolor = document.getElementById('red');
 
 
-colors.bcolor.onclick = function(){
- 
-    
-    ctxb.strokeStyle = '#0000ff';   
-    
+colors.bcolor.onclick = function()
+{
+    ctxb.strokeStyle = '#0000ff';     
 }
 
-colors.blcolor.onclick = function(){
- 
-    
-    ctxb.strokeStyle = '#000000';   
-    
+colors.blcolor.onclick = function()
+{
+    ctxb.strokeStyle = '#000000';      
 }
 
-colors.gcolor.onclick = function(){
- 
-    
-    ctxb.strokeStyle = '#00cc00';   
-    
+colors.gcolor.onclick = function()
+{
+    ctxb.strokeStyle = '#00cc00';     
 }
 
-colors.ycolor.onclick = function(){
- 
-    
-    ctxb.strokeStyle = '#ffff00';   
-    
+colors.ycolor.onclick = function()
+{
+    ctxb.strokeStyle = '#ffff00';     
 }
 
-colors.rcolor.onclick = function(){
- 
-    
-    ctxb.strokeStyle = '#ff0000';   
-    
+colors.rcolor.onclick = function()
+{
+    ctxb.strokeStyle = '#ff0000';      
 }
 
 
@@ -87,109 +76,97 @@ shapes.circle = document.getElementById('circle');
 
 var shapeOpenSquare = false, shapeOpenRectangle = false, shapeOpenCircle = false;
 
-shapes.square.onclick = function() {
-
-      canvasBack.width = canvasBack.width;
+shapes.square.onclick = function()
+{
+    canvasBack.width = canvasBack.width;
     canvasFront.width = canvasFront.width;
     ctxb.rect(20,20,100,100);
     ctxb.stroke();
     shapeOpenSquare = true;
-     shapeOpenRectangle = false;
+    shapeOpenRectangle = false;
     shapeOpenCircle = false;
-    
-
-
 }
 
-shapes.rectangle.onclick = function() {
-
-      canvasBack.width = canvasBack.width;
+shapes.rectangle.onclick = function() 
+{
+    canvasBack.width = canvasBack.width;
     canvasFront.width = canvasFront.width;
     ctxb.rect(20,20,150,100);
     ctxb.stroke();
-     shapeOpenRectangle = true;
+    shapeOpenRectangle = true;
     shapeOpenSquare = false;
-      shapeOpenCircle = false;
- 
-
+    shapeOpenCircle = false;
 }
 
 
-shapes.secondSizel.onclick = function() {
-
-    
-    if(shapeOpenSquare == true){
-      canvasBack.width = canvasBack.width;
-    canvasFront.width = canvasFront.width;
-    ctxb.rect(20,20,150,150);
-    ctxb.stroke();
+shapes.secondSizel.onclick = function()
+{
+    if(shapeOpenSquare == true)
+    {
+        canvasBack.width = canvasBack.width;
+        canvasFront.width = canvasFront.width;
+        ctxb.rect(20,20,150,150);
+        ctxb.stroke();
         shapeOpenSquare = true;
         shapeOpenRectangle = false;
-        
     }
     
     
-          else if(shapeOpenRectangle == true){
-      canvasBack.width = canvasBack.width;
-    canvasFront.width = canvasFront.width;
-    ctxb.rect(20,20,200,150);
-    ctxb.stroke();
-    shapeOpenSquare = false;
-    shapeOpenRectangle = true;
+    else if(shapeOpenRectangle == true)
+    { 
+        canvasBack.width = canvasBack.width;
+        canvasFront.width = canvasFront.width;
+        ctxb.rect(20,20,200,150);
+        ctxb.stroke();
+        shapeOpenSquare = false;
+        shapeOpenRectangle = true;
     }
- 
-
 }
 
 
-shapes.thirdSizel.onclick = function() {
-
-    
-    if(shapeOpenSquare == true){
-      canvasBack.width = canvasBack.width;
-    canvasFront.width = canvasFront.width;
-    ctxb.rect(20,20,80,80);
-    ctxb.stroke();
+shapes.thirdSizel.onclick = function() 
+{ 
+    if(shapeOpenSquare == true)
+    {
+        canvasBack.width = canvasBack.width;
+        canvasFront.width = canvasFront.width;
+        ctxb.rect(20,20,80,80);
+        ctxb.stroke();
         shapeOpenSquare = true;
-        shapeOpenRectangle = false;
-        
+        shapeOpenRectangle = false;  
     }
     
-    
-          else if(shapeOpenRectangle == true){
-      canvasBack.width = canvasBack.width;
-    canvasFront.width = canvasFront.width;
-    ctxb.rect(20,20,120,90);
-    ctxb.stroke();
-    shapeOpenSquare = false;
-    shapeOpenRectangle = true;
+    else if(shapeOpenRectangle == true)
+    {
+        canvasBack.width = canvasBack.width;
+        canvasFront.width = canvasFront.width;
+        ctxb.rect(20,20,120,90);
+        ctxb.stroke();
+        shapeOpenSquare = false;
+        shapeOpenRectangle = true;
     }
- 
-
 }
 
 
-
-
-
-
-window.onload = function(){
+window.onload = function()
+{
     canvasPosition = canvasBack.getBoundingClientRect();
 }
 
-canvasWidth.onchange = function() {
-    
-    canvasFront.width = canvasWidth.value;
-    canvasBack.width = canvasWidth.value;
+canvasWidth.onchange = function() 
+{
+   canvasFront.width = canvasWidth.value;
+   canvasBack.width = canvasWidth.value;
 }
 
-canvasHeight.onchange = function() {
-    
+canvasHeight.onchange = function()
+{  
     canvasFront.height = canvasHeight.value;
     canvasBack.height = canvasHeight.value;
 }
 
-canvasFront.onmousemove = function(e){
+canvasFront.onmousemove = function(e)
+{
     mouseX = e.clientX - canvasPosition.left;
     mouseY = e.clientY - canvasPosition.top;
     mouseXl.innerHTML = mouseX;
@@ -197,10 +174,10 @@ canvasFront.onmousemove = function(e){
 }
   
 
-canvasClear.onclick = function(){
+canvasClear.onclick = function()
+{
     canvasBack.width = canvasBack.width;
-    canvasFront.width = canvasFront.width;
-    
+    canvasFront.width = canvasFront.width;  
 }
 
 
@@ -208,47 +185,49 @@ addAllHandlers(tools, "tool-active");
 addAllHandlers(sizes, "size-active");
 addAllHandlers(colors, "color-active");
 
-function addAllHandlers(arr, className){
-    
-    for(var item in arr){
-        
+function addAllHandlers(arr, className)
+{ 
+    for(var item in arr)
+    {  
         arr[item].onmousedown = addHandler(arr[item], arr, className);
     }
 }
 
-
-
-function addHandler( element, arr, className){
-    
-    return function() {
-        
+function addHandler( element, arr, className)
+{  
+    return function() 
+    {
         removeAllClasses(arr);
         element.setAttribute("class", className);
     } 
     
 }
 
-function removeAllClasses(arr){
+function removeAllClasses(arr)
+{
     
-    for(var item in arr){
-        
+    for(var item in arr)
+    { 
         arr[item].removeAttribute("class");
     }
 }
 
-sizes.small.onclick = function(){
+sizes.small.onclick = function()
+{
     ctxb.lineWidth = 1;
     eraserSize = 8;
     eraserCursor = "url('images/cursor/eraser_small.png'), auto";
 }
 
-sizes.middle.onclick = function(){
+sizes.middle.onclick = function()
+{
     ctxb.lineWidth = 5;
     eraserSize = 16;
     eraserCursor = "url('images/cursor/eraser_middle.png'), auto";
 }
 
-sizes.big.onclick = function(){
+sizes.big.onclick = function()
+{
     ctxb.lineWidth = 15;
     eraserSize = 32;
     eraserCursor = "url('images/cursor/eraser_big.png'), auto";
@@ -257,15 +236,15 @@ sizes.big.onclick = function(){
 var processing = false;
 var operations = [];
 
-operations['mousedown'] = function() {
-    
+operations['mousedown'] = function() 
+{  
     processing = true;
     ctxb.beginPath();
     
 };
 
-operations['mouseup'] = function() {
-    
+operations['mouseup'] = function()
+{
     processing = false;
     
 };
@@ -279,12 +258,15 @@ canvasFront.addEventListener("mouseup", function(){ operations["mouseup"]();
 canvasFront.addEventListener("mousemove", function(){ operations["mousemove"]();
 });
 
-tools.pencil.onclick = function(){
+tools.pencil.onclick = function()
+{
     
     canvasFront.style.cursor = "pointer";
-    operations['mousemove'] = function() {
+    operations['mousemove'] = function()
+    {
         
-        if(processing){
+        if(processing)
+        {
             
             ctxb.lineTo(mouseX, mouseY);
             ctxb.stroke();
@@ -292,60 +274,58 @@ tools.pencil.onclick = function(){
     };
 };
 
-tools.eraser.onclick = function(){
+tools.eraser.onclick = function()
+{
     
    
-    operations['mousemove'] = function() {
+    operations['mousemove'] = function() 
+    {
         canvasFront.style.cursor = eraserCursor;
-        if(processing){
+        if(processing)
+        {
             
             ctxb.clearRect(mouseX, mouseY, eraserSize, eraserSize);
         };
     };   
 };
 
-color.onchange = function(e) {
-    
+color.onchange = function(e)
+{
     ctxb.strokeStyle = e.srcElement.value;
-    
 }
 
-
-
-
-fileImg.onchange = function() {
-    
+fileImg.onchange = function() 
+{
     var file = fileImg.files[0];
     var reader = new FileReader();
-    reader.onload = function(event) {
+    reader.onload = function(event) 
+    {
         
         var dataUri = event.target.result;
-            img = new Image();
-        img.onload = function(){
-            
+        img = new Image();
+        img.onload = function()
+        {
             ctxf.strokeRect(startX, startY, img.width, img.height);
             ctxf.drawImage(img, startX, startY);
-            
-            operations['mousemove'] = function (){
-                
-                if(processing){
-                    
+            operations['mousemove'] = function ()
+            {
+                if(processing)
+                {
                     canvasFront.width = canvasFront.width;
                     ctxf.strokeRect(mouseX, mouseY, imgWidth.value, imgHeight.value);
-                    
                     ctxf.drawImage(img, mouseX, mouseY, imgWidth.value, imgHeight.value);
                 };
             };
             
-            operations['mouseup'] = function(){
-                
+            operations['mouseup'] = function()
+            {
                 properties.style.display = 'none';
                 canvasFront.width = canvasFront.width;
                 processing = false;
                 ctxb.drawImage(img, mouseX, mouseY, imgWidth.value, imgHeight.value);
                 operations['mousemove'] = undefined;
-                operations['mouseup'] = function(){
-                    
+                operations['mouseup'] = function()
+                {  
                     processing = false;
                 };
                 
@@ -360,26 +340,26 @@ fileImg.onchange = function() {
     };
     
     reader.readAsDataURL(file);
-    
-    
 }
 
 
 imgWidth.addEventListener("change", changeImgSize);
 imgHeight.addEventListener("change", changeImgSize);
-function changeImgSize(){
-    
+function changeImgSize()
+{
     canvasFront.width = canvasFront.width;
     ctxf.strokeRect(startX, startY, imgWidth.value, imgHeight.value);
     ctxf.drawImage(img, startX, startY, imgWidth.value, imgHeight.value);
 }
 
-invert.onclick = function () {
-    
+invert.onclick = function () 
+{
     var imageData = ctxf.getImageData(startX, startY, imgWidth.value, imgHeight.value);
-    for(var i = 0; i< imageData.data.length; i+=4){
+    for(var i = 0; i< imageData.data.length; i+=4)
+    {
         
-        for(var j = i; j<i + 3; j++){
+        for(var j = i; j<i + 3; j++)
+        {
             
             imageData.data[j] = 255 - imageData.data[j];
             
